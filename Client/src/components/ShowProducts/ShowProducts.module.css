@@ -1,0 +1,196 @@
+.showProducts__container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(199, 31, 31); */
+  position: relative;
+  bottom: 0px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 90vw;
+  margin: auto;
+  background: #dd3e54;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6be585, #dd3e54);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6be585, #dd3e54);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.showProductsHeader__container {
+  display: block;
+  justify-content: center;
+}
+
+.showProductsHeader__heading>h2 {
+  color: rgb(46, 46, 49);
+  text-align: center;
+  font-size: 30px;
+  padding-top: 5px;
+  font-family: 'Ramaraja', serif;
+  letter-spacing: 2px;
+}
+
+.showProductsHeader__buttons {
+  text-align: center;
+
+}
+
+.showProductsHeader__buttons>button {
+  width: 200px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  justify-content: center;
+  font-family: 'Ramaraja', serif;
+  letter-spacing: 2px;
+  border: 1px solid rgb(218, 214, 207);
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(95, 158, 123);
+}
+
+.showProductsHeader__buttons>button:hover {
+  background-color: rgb(5, 5, 78);
+  color: azure;
+  border-radius: 4px;
+}
+
+.showProductsCard__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* ++++showProductsInner+++ */
+.showProducts__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.showProductsInner__search {
+  text-align: center;
+  padding: 20px;
+
+}
+
+.showProductsInner__search>input {
+  max-width: 400px;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  border: 1px solid rgb(57, 58, 57);
+  box-shadow: rgba(20, 19, 19, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+
+.showProductsSingle__card {
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 220px;
+  margin: 1px auto 2px auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.showProductsSingle__card:hover {
+  transform: scale(1.0);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  cursor: pointer;
+}
+
+.showProductsSingle__cardImg {
+  width: 50%;
+  height: 30vh;
+  object-fit: contain;
+  align-items: center;
+}
+
+.showProductsSingle__cardPrice {
+  object-fit: contain;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+.showProductsSingle__cardModel {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+
+.showProducts__addToCartButton {
+  text-align: center;
+  margin: 5px auto;
+  justify-content: center;
+  font-family: 'Ramaraja', serif;
+  letter-spacing: 2px;
+  width: 100px;
+  height: 35px;
+  border: 1px solid rgb(238, 165, 38);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+/* .showProducts__addToCartButton > button {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  color: blue;
+  background-color: rgb(194, 189, 182);
+  cursor: pointer;
+  border: none;
+} */
+.showProducts__addToCartButton:hover {
+  background-color: rgb(5, 5, 78);
+  color: azure;
+  border-radius: 4px;
+}
+
+
+/* ===========showmore__button */
+
+.showmore__button {
+  width: 90vw;
+  margin: auto;
+}
+
+.showmore__button>img {
+  border: none;
+
+  float: right;
+  /* border: 1px solid rgb(190, 132, 23); */
+  border-radius: 5px;
+  color: aliceblue;
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+
+}
+
+.showmore__button>button:hover {
+  color: rgb(253, 251, 251);
+  background-color: rgb(65, 73, 70);
+  cursor: pointer;
+}

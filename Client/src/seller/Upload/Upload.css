@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    height: 85vh;
+    top: 0;
+    left: 0;
+    margin-top: 80px;
+    background: #40E0D0;
+    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+}
+
+.upload {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    max-height: 50vh;
+    margin-top: calc(100vh - 85vh - 20px);
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    border: 1px solid #999;
+    overflow: auto;
+}
+
+.preview {
+    margin: 10% auto;
+}
+
+.close-icon {
+    content: 'x';
+    cursor: pointer;
+    position: fixed;
+    right: 2%;
+    top: 15%;
+    background: #c2c2c2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #999;
+    font-size: 20px;
+}
+
+.close-icon:hover {
+    font-size: 25px;
+    color: wheat;
+    background: #963434;
+    width: 100px;
+    height: 100px;
+}
+
+.upload__inner {
+    display: block;
+    width: 320px;
+    margin: 10px auto;
+    /* background-color: red; */
+
+}
+
+.upload__inner>input {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px auto;
+    width: 300px;
+    height: 30px;
+}
+
+.upload__inner>button {
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: rgb(18, 19, 18);
+    color: rgb(250, 240, 240);
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.upload__inner>button:hover {
+    background-color: rgb(207, 141, 40);
+    color: black;
+    cursor: pointer;
+
+}
+
+.select__option {
+    background-color: red;
+    width: 100%;
+}
+
+.select__option>option,
+select {
+    background-color: rgb(197, 188, 188);
+    width: 100%;
+    height: 30px;
+
+}
+
+/* ============== Uploaded products..... */
+.show__uploaded {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.uploaded__inner {
+    border: 1px solid wheat;
+    width: auto;
+    display: flex;
+    margin: 10px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.uploaded__inner>img {
+    width: 50px;
+    height: 50px;
+}

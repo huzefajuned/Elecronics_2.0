@@ -1,0 +1,170 @@
+.slide__container {
+  margin: 85px auto;
+  border-radius: 5px;
+  width: 96vw;
+  height: 60vh;
+  /* background-image: linear-gradient(to right top, #e5e5e5, #c3c3c3, #a2a2a2, #828282, #646464); */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.show__images {
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* // Css for items ..... */
+
+.card__container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 200px;
+  width: 100vw;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0px auto 0px auto;
+}
+
+.item__card {
+  border: 1px solid rgb(243, 237, 237);
+  margin: 10px;
+  display: block;
+  height: auto;
+  border-radius: 10px;
+  width: 80vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* .item__card:hover {
+  background-color: rgb(128, 125, 127);
+  transform: rotate(0deg);
+  cursor: pointer;
+} */
+.item__img {
+  margin: 10px auto;
+  justify-content: center;
+  display: flex;
+  max-width: 300px;
+  width: 260px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.item__Price {
+  max-width: 240px;
+  color: rgb(8, 180, 3);
+  font-size: 24px;
+  font-weight: 800;
+  margin-left: 20%;
+  text-shadow: 1px 0px 2px rgb(29, 31, 31);
+  font-family: 'Ramaraja', serif;
+  letter-spacing: 2px;
+
+}
+
+.item__model {
+  max-width: 240px;
+  font-size: 20px;
+  font-weight: 900;
+  margin-left: 15%;
+  color: rgb(8, 109, 122);
+  text-shadow: 1px 0px 2px rgb(29, 31, 31);
+}
+
+.item__Description {
+  max-width: 280px;
+  height: auto;
+  display: flex;
+  margin: auto auto 20px auto;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+/*  ****************offercard__container--------- */
+
+.offercard__container {
+  border-radius: 20px;
+  border: 1px solid rgb(238, 243, 239);
+  position: relative;
+  bottom: 120px;
+  display: block;
+  width: 90vw;
+  padding: 5px;
+  margin: 0px auto;
+  box-shadow: rgba(84, 197, 9, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.offercard__inner {
+  display: block;
+}
+
+.inner__img {
+  padding: 5px;
+  width: 200px;
+  height: 180px;
+}
+
+.single__card {
+  width: 300px;
+  display: block;
+  text-align: center;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.single__card:hover {
+
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.single__card>button {
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  justify-content: center;
+  font-family: 'Ramaraja', serif;
+  letter-spacing: 2px;
+  border: 1px solid rgb(218, 214, 207);
+  border-radius: 4px;
+  border: none;
+}
+
+.single__card>button:hover {
+  color: white;
+  background-color: rgb(9, 9, 65);
+  cursor: pointer;
+}
+
+
+/* ******* css for maxwidth 320px----- */
+
+@media screen and (max-width:380px) {
+
+  .slide__container {
+    width: 100%;
+    margin: 50px auto;
+    background-color: rgb(85, 61, 61);
+    height: 100px;
+  }
+
+  .show__images {
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+  }
+
+}

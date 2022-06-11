@@ -1,0 +1,40 @@
+.container {
+    display: block;
+    height: 60vh;
+    overflow: auto;
+    /* width: 95vw; */
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 68vw;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.card>img {
+    width: 50px;
+    width: 5%;
+}
+
+.card>h3 {
+    width: 10%;
+}
+
+.card>h6 {
+    margin-right: 5px;
+    width: 30%;
+    font-size: 10px;
+}
+
+.card>button {
+    background-color: rgb(139, 135, 135);
+    width: 10%;
+    height: 30px;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.footer__container{
+    display: flex;
+    border:  1px solid rgb(224, 222, 222);
+    background-color: rgb(36, 35, 34);
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+}
+.footer__left{
+    /* background-color: beige; */
+    width: 30vw;
+    text-align: center;
+}
+.footer__middle{
+    width: 40vw;
+    text-align: center;
+}
+.footer__right{
+    /* background-color: rgb(187, 153, 153); */
+    width: 30vw;
+    text-align: center;
+}
