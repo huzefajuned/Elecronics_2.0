@@ -9,13 +9,7 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   width: 90vw;
   margin: auto;
-  background: #dd3e54;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #6be585, #dd3e54);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #6be585, #dd3e54);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
 
 .showProductsHeader__container {
@@ -102,27 +96,29 @@
   width: 220px;
   margin: 1px auto 2px auto;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
 }
 
 .showProductsSingle__card:hover {
-  transform: scale(1.0);
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(145, 46, 46, 0.25) 0px 0.125em 0.5em, rgba(135, 4, 4, 0.1) 0px 0px 0px 1px inset;
   cursor: pointer;
 }
 
 .showProductsSingle__cardImg {
-  width: 50%;
-  height: 30vh;
+  width: 90%;
+  height: 200px;
   object-fit: contain;
   align-items: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 .showProductsSingle__cardPrice {
   object-fit: contain;
   text-align: center;
   font-family: 'Libre Baskerville', serif;
+  margin: 0px;
+  padding: 0px;
 
 }
 
@@ -139,27 +135,20 @@
   justify-content: center;
   font-family: 'Ramaraja', serif;
   letter-spacing: 2px;
-  width: 100px;
-  height: 35px;
+  width: 80%;
+  height: 30px;
   border: 1px solid rgb(238, 165, 38);
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  /* opacity: 0; */
 }
 
-/* .showProducts__addToCartButton > button {
-  width: 90%;
-  height: 30px;
-  border-radius: 5px;
-  color: blue;
-  background-color: rgb(194, 189, 182);
-  cursor: pointer;
-  border: none;
-} */
 .showProducts__addToCartButton:hover {
   background-color: rgb(5, 5, 78);
   color: azure;
   border-radius: 4px;
+  /* opacity: 100; */
 }
 
 
@@ -193,4 +182,16 @@
   color: rgb(253, 251, 251);
   background-color: rgb(65, 73, 70);
   cursor: pointer;
+}
+
+.heart_icon {
+  color: red;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.heart_icon:hover {
+  color: black;
+  font-size: 21px;
 }

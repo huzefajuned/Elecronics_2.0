@@ -11,7 +11,7 @@ const Products = () => {
     const loadProductData = () => {
         axios.get('/product/read').then((resp) => {
             setProdData(resp.data);
-            console.log(resp.data)
+            // console.log(resp.data)
         })
     }
 

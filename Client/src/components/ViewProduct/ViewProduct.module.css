@@ -1,16 +1,13 @@
 .viewprod__container{
-    /* background-color: aquamarine; */
     margin: 100px auto;
     display: flex;
     flex-direction: row;   
     width: 90vw; 
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    border-radius: 10px;
-    border:  1px solid wheat;
-    background-color: aliceblue;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 .viewprod__left{
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     width: 40vw;
     display: inline-block;
 
@@ -45,12 +42,10 @@
 }
 .viewprod__right{
     display: block;
-    width: 60vw;
+    width: 50vw;
     justify-content: center;
     margin: auto;
     text-align: center;
-    border-left: 2px solid rgb(192, 27, 27);
-
 }
 .right__details{
     /* background-color: aquamarine; */

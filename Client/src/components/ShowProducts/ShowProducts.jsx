@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./ShowProducts.module.css";
 import { useNavigate } from 'react-router-dom'
 import moreIcon from '../../images/more-icon.png'
+import { BsHeart } from 'react-icons/bs'
 
 function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
 
@@ -16,6 +17,7 @@ function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
   //View MOre Products   
   const [visible, setVisible] = useState(8)
   const showMore = () => {
+    alert("hover on Onhever")
     setVisible((preValue => preValue + 4))
   }
 
@@ -27,21 +29,22 @@ function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
       <div className={styles.showProductsCard__container}  >
 
         {prodData.map((currentElem) => {
-          const { _id, image, price, model,category } = currentElem;
+          const { _id, image, price, model, category } = currentElem;
           // console.log('img',currentElem.price)
           // console.log(image)
 
           return (<>
             <div key={price} className={styles.showProductsSingle__card} >
               <img className={styles.showProductsSingle__cardImg} src={currentElem.image} alt="CARD__IMG" onClick={() => navToViewPage(currentElem)} />
-              <h4 className={styles.showProductsSingle__cardPrice}> ₹{price} </h4>
               <h4 className={styles.showProductsSingle__cardModel}> {model} </h4>
+              <h4 className={styles.showProductsSingle__cardPrice}> ₹{price} </h4>
               <button className={styles.showProducts__addToCartButton} onClick={() => handleClick(currentElem)}> Add To Cart </button>
+              <BsHeart className={styles.heart_icon} />
             </div>
           </>)
         })}
       </div>
-        
+
       {/* ++++++++++ Show More Button +++++++++++ */}
       <div className={styles.showmore__button} onMouseOver={showMore}>
         <img src={moreIcon} alt=" viewMoreIcon" />
