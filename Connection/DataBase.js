@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config()
+const DB_URL = process.env.DB_URL
 
 const DataBase =
-    mongoose.connect(process.env.DataBase).then(() => {
+    mongoose.connect(DB_URL).then(() => {
         console.log(" Connected To Electronics DataBase")
     })
         .catch(
