@@ -30,25 +30,28 @@ function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
 
         {prodData.map((currentElem) => {
           const { _id, image, price, model, category } = currentElem;
-          // console.log('img',currentElem.price)
-          // console.log(image)
 
           return (<>
-            <div key={price} className={styles.showProductsSingle__card} >
+            <div  className={styles.showProductsSingle__card} >
               <img className={styles.showProductsSingle__cardImg} src={currentElem.image} alt="CARD__IMG" onClick={() => navToViewPage(currentElem)} />
               <h4 className={styles.showProductsSingle__cardModel}> {model} </h4>
               <h4 className={styles.showProductsSingle__cardPrice}> ₹{price} </h4>
               <button className={styles.showProducts__addToCartButton} onClick={() => handleClick(currentElem)}> Add To Cart </button>
               <BsHeart className={styles.heart_icon} />
             </div>
+
           </>)
         })}
       </div>
+      {/* ++++++++++ Show More Button +++++++++++ */}
+      <button className={styles.showMore} onClick={showMore}>
+        Slow More
+      </button>
 
       {/* ++++++++++ Show More Button +++++++++++ */}
-      <div className={styles.showmore__button} onMouseOver={showMore}>
+      {/* <div className={styles.showmore__button} onMouseOver={showMore}>
         <img src={moreIcon} alt=" viewMoreIcon" />
-      </div>
+      </div> */}
 
     </div>
   );

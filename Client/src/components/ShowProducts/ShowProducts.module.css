@@ -1,8 +1,10 @@
 .showProducts__container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(199, 31, 31); */
+  text-align: center;
   position: relative;
   bottom: 0px;
   border-radius: 4px;
@@ -63,6 +65,7 @@
 .showProducts__inner {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 
@@ -184,6 +187,7 @@
   cursor: pointer;
 }
 
+/* ++++ heart_icon */
 .heart_icon {
   color: red;
   font-size: 16px;
@@ -193,5 +197,12 @@
 
 .heart_icon:hover {
   color: black;
-  font-size: 21px;
+  
+}
+/* ++++ showMore button */
+.showMore{
+  padding: 10px;
+  border: none;
+  background-color: #2b0a37;
+  color: palegreen;
 }

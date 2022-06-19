@@ -30,7 +30,7 @@ const Home = () => {
           cardData.map((elem) => {
             return (
               <>
-                <div className={styles.card}>
+                <div key={elem.name} className={styles.card}>
                   <h4> {elem.name}</h4>
                   <h5>{elem.value}</h5>
                 </div>

@@ -27,10 +27,11 @@ app.use(bodyParser.json())
 
 app.use('/public/', express.static("public"));
 app.use('/uploads/', express.static("uploads"));
-app.use('/Admin/uploads/', express.static("uploads"))
+app.use('/Admin/uploads/', express.static("uploads"));
 
 
-app.listen(process.env.PORT, () => {
-    console.log("Listening Port at " + process.env.PORT)
+
+app.listen(PORT, () => {
+    console.log("Listening Port at " + PORT)
     // console.log(PORT, "hii")
 })

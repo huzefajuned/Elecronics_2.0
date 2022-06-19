@@ -3,28 +3,23 @@
     flex-direction: row;
     flex-wrap: wrap;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 85vh;
     top: 0;
     left: 0;
     margin-top: 80px;
-    background: #40E0D0;
-    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
-    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
-}
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);}
 
 .upload {
     position: relative;
     width: 50%;
     margin: 0 auto;
     height: auto;
-    max-height: 50vh;
+    /* max-height: 50vh; */
     margin-top: calc(100vh - 85vh - 20px);
-    background: #fff;
     border-radius: 4px;
     padding: 20px;
-    border: 1px solid #999;
-    overflow: auto;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;    overflow: auto;
 }
 
 .preview {

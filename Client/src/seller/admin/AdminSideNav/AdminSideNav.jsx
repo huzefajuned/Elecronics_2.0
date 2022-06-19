@@ -49,8 +49,8 @@ const AdminSideNav = () => {
           <nav className={styles.sidebar}>
             <ul>
               <li onClick={() => home()}><a > {<FaHome className={styles.icons} />} Home</a></li>
-              <li onClick={() => products()}><a > {<HiDatabase className={styles.icons} />} Our Product</a></li>
-              <li onClick={() => upload()}><a >  {<BiFolderPlus className={styles.icons} />} Add New Product</a></li>
+              <li onClick={() => products()}><a > {<HiDatabase className={styles.icons} />} My Product</a></li>
+              <li onClick={() => upload()}><a >  {<BiFolderPlus className={styles.icons} />} Add New </a></li>
               <li><a> {<CgRecord className={styles.icons} />} Orders</a></li>
               <li><a> {<CgRecord className={styles.icons} />} Delivered Orders</a></li>
               <li><a> {<CgRecord className={styles.icons} />} Pending Order</a></li>
