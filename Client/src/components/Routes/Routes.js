@@ -1,17 +1,16 @@
 import React from 'react'
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, Router, BrowserRouter } from 'react-router-dom'
 import Cart from '../Cart/Cart'
 import Login from '../../Pages/Login/Login'
 import HomePage from '../../Pages/HomePage/HomePage';
 import CartItems from '../CartItems/CartItems'
 import ViewProduct from '../ViewProduct/ViewProduct';
 import Profile from '../../Pages/Profile/Profile';
-import Admin from '../../seller/Admin/AdminHomePage/AdminHomePage'
+import Admin from '../../seller/admin/AdminHomePage/AdminHomePage'
 import Upload from '../../seller/Upload/Upload'
 import Products from '../../seller/Products/Products';
 import Home from '../../seller/Home/Home';
 import Header from '../Header/Header';
-import Auth from '../../seller/Auth/Auth';
 const AllRoutes = ({ prod, isLoggedIn, setIsLoggedIn, loadProductData, prodData, searchItem, setSearchItem, cart, setCart, handleChange, handleClick, size }) => {
     return (
         <>
@@ -39,14 +38,12 @@ const AllRoutes = ({ prod, isLoggedIn, setIsLoggedIn, loadProductData, prodData,
 
             {/* **********Routes for Admins Only *************** */}
             <Routes>
-                <Route path="Auth" element={<Auth />} >
-
-                </Route>
                 <Route path="Admin" element={<Admin />} >
                     <Route path="" element={<Home />} />
                     <Route path="Home" element={<Home />} />
                     <Route path="Products" element={<Products />} />
                     <Route path="Upload" element={<Upload />} />
+
                 </Route>
             </Routes>
 
@@ -54,4 +51,4 @@ const AllRoutes = ({ prod, isLoggedIn, setIsLoggedIn, loadProductData, prodData,
     )
 }
 
-export default AllRoutes 
+export default AllRoutes

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from './AdminSideNav.module.css'
+import styles from '../AdminSideNav/AdminSideNav.module.css'
 import { useNavigate, Link, Outlet } from 'react-router-dom'
 import Header from '../../../components/Header/Header'
 import { useLocation } from 'react-router-dom'
@@ -43,7 +43,7 @@ const AdminSideNav = () => {
           <h3 className={styles.header} onClick={() => navigate('/')}> Admin Panel</h3>
           <h5 className={styles.user}>Logged as Salman khan</h5>
         </div>
-    
+
         <div className={styles.inner}>
 
           <nav className={styles.sidebar}>

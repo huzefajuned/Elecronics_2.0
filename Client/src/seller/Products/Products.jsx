@@ -30,13 +30,13 @@ const Products = () => {
         loadProductData()
     }, [])
     const loadProductData = () => {
-        axios.get('/item').then((resp) => {
+        axios.get('/product/read').then((resp) => {
             setProdData(resp.data);
             // console.log(resp.data)
         })
     }
     const deleteById = async (_id) => {
-        await axios.delete(`/item/${_id}`).then(resp => {
+        await axios.delete(`/product/read/${_id}`).then(resp => {
             toast.success(resp.data.message, resp.data.model);
             console.log(resp.data)
 

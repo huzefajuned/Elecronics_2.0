@@ -1,25 +1,29 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 
+// const fs = require("fs");
 const dotenv = require("dotenv");
 dotenv.config()
 
 require('./Connection/DataBase');
 
-const User = require('./Routes/user.route');
-const itemRoute = require('./Routes/item.route');
-const adminAuthRoute = require("./Routes/admin.auth.route")
+const prodAuth = require('./Routes/prodAuth');
+const User = require('./Routes/userAuth');
+// const userAuth = require('./Routes/userAuth');
 
 const app = express();
 const PORT = process.env.PORT;
-app.use(User, itemRoute, adminAuthRoute)
+app.use(express.json());
+// app.use(User, prodAuth);
+
+app.use(User, prodAuth);
+// app.use(userAuth);
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-app.use(express.json());
 
 app.use('/public/', express.static("public"));
 app.use('/uploads/', express.static("uploads"));

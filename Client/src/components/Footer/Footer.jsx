@@ -1,29 +1,32 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from '../Footer/Footer.module.css'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const Footer = () => {
-
+    
     return (
         <>
 
             <div className={styles.footer__container}>
                 <div className={styles.footer__left}>
-                <h2>Seller Corner</h2>
+                    <Link to="Admin">
+                        <h3 style={{ border: "2px solid brown" }}> Sell On Electronics</h3>
 
-                    <Link to="Auth">
-                        <h3 style={{ border: "2px solid brown" ,cursor:'pointer'}}> Sell On Electronics</h3>
                     </Link>
+                    <h2>Login As Seller</h2>
+                    <h2> Register As Seller</h2>
                 </div>
                 <div className={styles.footer__middle}>
-                    <h1>shortCuts</h1>
                     <h4> Electronics,Bulbs,Chargers</h4>
                     <h4>Chargers</h4>
                     <h4>Data Cables</h4>
                     <h4>Bulbs</h4>
                 </div>
                 <div className={styles.footer__right}>
+                    <hr />
+                    <hr />
+
                     <div>
                         <h3> Complete Address</h3>
 
@@ -31,10 +34,14 @@ const Footer = () => {
                         New Town , Kolkata West Bengal <br />
                         700156 India
                     </div>
+                    <hr />
+                    <hr />
                     <div>
                         :h@gmail.com <br />
                         Contact N0 <br />
+
                     </div>
+
                 </div>
             </div>
         </>

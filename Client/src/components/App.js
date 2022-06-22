@@ -12,7 +12,7 @@ import axios from 'axios'
 function App() {
 
   const [searchItem, setSearchItem] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [prodData, setProdData] = useState([]);
 
   useEffect(() => {
@@ -45,11 +45,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header
-          isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}
-          searchItem={searchItem} setSearchItem={setSearchItem}
-          cart={cart}
-        />
         <AllRoutes
           isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}
           loadProductData={loadProductData} prodData={prodData}
@@ -58,6 +53,17 @@ function App() {
           handleClick={handleClick}
 
         />
+          {/* **********Routes for Admins Only *************** */}
+          {/* <Routes>
+                <Route path="Admin" element={<Admin />} >
+
+                    <Route path="Home" element={<Home />} />
+                    <Route path="Products" element={<Products />} />
+                    <Route path="Upload" element={<Upload />} />
+
+                </Route>
+            </Routes> */}
+
       </BrowserRouter>
       <ToastContainer />
     </>
