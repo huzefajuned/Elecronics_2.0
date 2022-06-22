@@ -1,8 +1,9 @@
 .footer__container{
     display: flex;
+    width: 90vw;
+    margin: 5px auto;
     border:  1px solid rgb(224, 222, 222);
-    background-color: rgb(36, 35, 34);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
     overflow: hidden;
 }
