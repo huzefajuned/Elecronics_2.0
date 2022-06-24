@@ -4,11 +4,10 @@ const multer = require("multer");
 const fs = require("fs")
 
 
-require('../Connection/DataBase');
+// require('../Connection/DataBase');
 
 
-const prodSchema = require('../Models/prodSchema');
-
+// const  sellerItemSchema = require('../Models/seller.item.schema');
 
 //REtriving all ProductData FRom MOngoDb Backend........;;;;;;
 
@@ -48,7 +47,7 @@ router.post('/product/insert', upload, async (req, res) => {
     //     console.log('errr')
     // }
     try {
-        const newProduct = new prodSchema({
+        const newProduct = new sellerItemSchema({
             image: req.file.path,
             price: req.body.price,
             model: req.body.model,

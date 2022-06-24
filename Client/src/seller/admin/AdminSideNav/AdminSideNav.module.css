@@ -67,10 +67,11 @@
 }
 
 .sidebar>ul>li>a {
+    color: rgb(10, 133, 63);
     cursor: pointer;
     font-size: 20px;
-    font-weight: 600;
-    font-family: 'Oleo Script Swash Caps', cursive;
+    font-weight: 200;
+    font-family: 'Oleo Script Swash Caps';
 
 }
 

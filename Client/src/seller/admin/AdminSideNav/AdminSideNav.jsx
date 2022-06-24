@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import styles from '../AdminSideNav/AdminSideNav.module.css'
 import { useNavigate, Link, Outlet } from 'react-router-dom'
-import Header from '../../../components/Header/Header'
 import { useLocation } from 'react-router-dom'
 import { FaHome } from 'react-icons/fa'
 import { BiFolderPlus } from 'react-icons/bi'
 import { HiDatabase } from 'react-icons/hi'
 import { CgRecord, CgProfile } from 'react-icons/cg'
 import { AiOutlineLogout } from 'react-icons/ai'
-import Upload from '../../Upload/Upload'
+import Upload from '../../../Seller/components/Upload/Upload'
 
 const AdminSideNav = () => {
   const location = useLocation();
@@ -18,8 +17,7 @@ const AdminSideNav = () => {
   // const [active, setActive] = useState(false);
   const [color, setColor] = useState()
   const home = () => {
-    // setActive(!active);
-    navigate('Home')
+    navigate('/Admin')
     setColor()
   };
 

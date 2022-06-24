@@ -1,25 +1,25 @@
 import React from 'react'
-import styles from '../Home/Home.module.css'
+import styles from './Home.module.css'
 
 const Home = () => {
 
   const cardData = [
     {
-      name: "Avalaible Products",
+      name: "In  Stock",
       value: 104
     },
     {
-      name: " Sold Products",
+      name: " Sold Items",
       value: 43
-    },
-    {
-      name: "Pending Orders ",
-      value: 44
-    },
-    {
-      name: " Total Revenue ",
-      value: 74860.90
     }
+    // {
+    //   name: "Pending Orders ",
+    //   value: 44
+    // },
+    // {
+    //   name: " Total Revenue ",
+    //   value: 74860.90
+    // }
   ]
 
   return (

@@ -6,11 +6,16 @@ import HomePage from '../../Pages/HomePage/HomePage';
 import CartItems from '../CartItems/CartItems'
 import ViewProduct from '../ViewProduct/ViewProduct';
 import Profile from '../../Pages/Profile/Profile';
-import Admin from '../../seller/admin/AdminHomePage/AdminHomePage'
-import Upload from '../../seller/Upload/Upload'
-import Products from '../../seller/Products/Products';
-import Home from '../../seller/Home/Home';
+import Admin from '../../Seller/Admin/AdminHomePage/AdminHomePage'
+import Upload from '../../Seller/components/Upload/Upload'
+import Products from '../../Seller/components/Products/Products';
+import Home from '../../Seller/Home/Home';
 import Header from '../Header/Header';
+
+//importing seller Components.
+import Seller_Register from '../../Seller/pages/Seller_Register/Seller_Register';
+import Seller_Login from '../../Seller/pages/Seller_Login/Seller_Login';
+
 const AllRoutes = ({ prod, isLoggedIn, setIsLoggedIn, loadProductData, prodData, searchItem, setSearchItem, cart, setCart, handleChange, handleClick, size }) => {
     return (
         <>
@@ -47,8 +52,15 @@ const AllRoutes = ({ prod, isLoggedIn, setIsLoggedIn, loadProductData, prodData,
                 </Route>
             </Routes>
 
+            {/* ***** seller register and login routes */}
+            <Routes>
+                <Route path='/seller_Register' element={<Seller_Register />} />
+                <Route />
+                <Route path='/seller_Login' element={<Seller_Login />} />
+            </Routes>
+
         </>
     )
 }
 
-export default AllRoutes
+export default AllRoutes;

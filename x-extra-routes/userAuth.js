@@ -9,13 +9,14 @@ const middleAuth = require('../middleware/middleAuth')
 
 
 require('../Connection/DataBase');
-const User = require('../Models/userSchema');
+// const User = require('../Models/userSchema');
+const User = require('../Models/auth.buyer.schema')
 
 //Regsiter Route.......
 
 router.post("/User/Register", async (req, res) => {
 
-    const { name, email, password } = req.body;
+    // const { name, email, password } = req.body;
 
     try {
 
@@ -29,9 +30,9 @@ router.post("/User/Register", async (req, res) => {
         const secPassword = await bcrypt.hash(password, salt)
 
         const newUser = await new User({
-            name: name,
-            email: email,
-            password: secPassword,
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.secPassword,
         })
 
         const user = await newUser.save();

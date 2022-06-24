@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Stoke&display=swap');
+
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100vw;
+    height: 85vh;
+    top: 0;
+    left: 0;
+    margin-top: 80px;
+    backdrop-filter: blur(10px);
+}
+
+.main {
+
+    position: relative;
+    width: 30%;
+    margin: 5% auto;
+    height: auto;
+    max-height: 60vh;
+    padding: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.preview {
+    margin: 10% auto;
+}
+
+.close {
+    content: 'x';
+    cursor: pointer;
+    position: fixed;
+    right: 48%;
+    top: 6%;
+    color: aliceblue;
+    background: #070707;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid rgb(231, 226, 226);
+    font-size: 20px;
+}
+
+.close:hover {
+    font-size: 25px;
+    color: wheat;
+    background: #963434;
+    width: 50px;
+    height: 50px;
+}
+
+.heading {
+    color: #963434;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Stoke', serif;
+    padding: 10px;
+    margin: 0px 0px 30px 0px;
+    /* background-color: #999; */
+
+}
+
+.form {
+    display: block;
+    width: 100%;
+    /* margin: 10px auto; */
+    /* background-color: red; */
+
+}
+
+.form>input {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    padding: 5px;
+    margin: 0px auto 10px auto;
+    width: 80%;
+    border: none;
+    color: #4d0303;
+    font-size: 18px;
+    font-family: Courier;
+}
+
+.checkbox {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.buttons {
+    width: 83%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(9, 9, 9);
+    margin: 5px 0px 0px 8.3%;
+    background-color: rgba(202, 203, 214, 0.332);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.buttons:hover {
+    background-color: rgb(6, 6, 112);
+    color: rgb(244, 238, 238);
+    cursor: pointer;
+
+}
+
+.category {
+    border: none;
+    margin: auto;
+    width: 83%;
+}
+
+.category>option,
+select {
+    /* background-color: rgb(147, 157, 149); */
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+
+}
+
+/* ============== Uploaded products..... */
+.show__uploaded {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.uploaded__inner {
+    border: 1px solid wheat;
+    width: auto;
+    display: flex;
+    margin: 10px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.uploaded__inner>img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ** for  (max-width:400px) */
+@media screen and (max-width:400px) {
+
+    .main {
+        width: 100%;
+    }
+}
