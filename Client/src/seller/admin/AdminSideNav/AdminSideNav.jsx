@@ -1,23 +1,25 @@
 import React, { useState } from 'react'
 import styles from '../AdminSideNav/AdminSideNav.module.css'
-import { useNavigate, Link, Outlet } from 'react-router-dom'
-import { useLocation } from 'react-router-dom'
+import { useNavigate, Link, Outlet,useLocation } from 'react-router-dom'
 import { FaHome } from 'react-icons/fa'
 import { BiFolderPlus } from 'react-icons/bi'
 import { HiDatabase } from 'react-icons/hi'
 import { CgRecord, CgProfile } from 'react-icons/cg'
 import { AiOutlineLogout } from 'react-icons/ai'
-import Upload from '../../../Seller/components/Upload/Upload'
+import Upload from '../../../Seller/components/Upload/Upload';
+
 
 const AdminSideNav = () => {
   const location = useLocation();
+  console.log(location.state)
+
   const [popup, setPopup] = useState(false)
 
   const navigate = useNavigate();
   // const [active, setActive] = useState(false);
   const [color, setColor] = useState()
   const home = () => {
-    navigate('/Admin')
+    navigate('/Seller_Dashboard')
     setColor()
   };
 

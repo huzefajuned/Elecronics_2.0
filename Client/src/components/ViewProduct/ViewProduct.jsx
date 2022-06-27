@@ -1,12 +1,16 @@
 import React from 'react'
 import styles from '../ViewProduct/ViewProduct.module.css'
 import { useLocation } from 'react-router-dom'
+import Header from '../Header/Header';
 
 const ViewProduct = () => {
     const location = useLocation();
     console.log(location)
     return (
+
         <>
+                <Header />
+
             <div className={styles.viewprod__container}>
                 <div className={styles.viewprod__left}>
                     <div className={styles.left__img}>

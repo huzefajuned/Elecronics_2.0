@@ -1,15 +1,21 @@
 import React, { useState } from 'react'
 import styles from '../Footer/Footer.module.css'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useNavigate } from 'react-router-dom'
 import Seller_Register from '../../Seller/pages/Seller_Register/Seller_Register'
 
 
 const Footer = () => {
+
+
+    const navigate = useNavigate()
     const [popup, setPopup] = useState(false)
     const upload = () => {
         // setActive(!active);
         // navigate('Upload')
-        setPopup(true)
+        // navigate("Seller_Dashboard");
+        setPopup(true);
+
+
     };
 
 

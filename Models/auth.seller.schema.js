@@ -1,20 +1,11 @@
 const mongoose = require('mongoose');
 
 const sellerSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        // required: true
-    },
-    email: {
-        type: String,
-        // required: true
-    },
-    password: {
-        type: String,
-        // required: true
-    }
+    name: String,
+    email: String,
+    password: String
 })
 
 
-const authSellerSchema = mongoose.model('authSellerSchema', sellerSchema);
-module.exports = authSellerSchema;
+const authSellerSchemas = mongoose.model('Auth_Seller_DB', sellerSchema);
+module.exports = authSellerSchemas;

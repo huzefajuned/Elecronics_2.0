@@ -4,53 +4,55 @@
     flex-wrap: wrap;
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     margin: 80px auto;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     /* background-color: red; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 
 }
 
 /* *** close_icon for close  the form */
 .close {
-    content: 'x';
+    content: '';
     cursor: pointer;
     position: fixed;
     right: 34%;
-    top: 4%;
+    top: 15%;
     color: rgb(11, 11, 11);
     width: 40px;
     height: 40px;
     border-radius: 10px;
     line-height: 20px;
     text-align: center;
-    border: 1px solid rgb(231, 226, 226);
+    border: none;
+    /* border: 1px solid rgb(231, 226, 226); */
     font-size: 20px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    /* box-shadow: rgba(167, 13, 13, 0.1) 0px 10px 50px; */
+    /* background-color: #8c9096; */
 }
 
 .close:hover {
     font-size: 25px;
     color: wheat;
-    background: #963434;
-    width: 50px;
-    height: 50px;
+    background: #656262;
+    width: 45px;
+    height: 45px;
 }
 
 .main {
-    background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+    /* background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%); */
     display: block;
     width: 30%;
-    height: 50%;
+    height: 50vh;
     text-align: center;
-    padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 20px auto;
-    /* border-radius: 20px; */
-    background-color: aliceblue;
+    margin: 10% auto;
+    background-image: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
 
 }
 
@@ -67,20 +69,24 @@
 
 .form {
     display: block;
-    background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
     padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+
 
 }
 
 input {
     display: block;
-    margin: 5px auto;
+    margin: 10px auto;
     width: 90%;
     height: 32px;
     border: none;
-    color: rgb(20, 20, 19);
+    color: rgb(0, 0, 0);
     font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    /* box-shadow: rgba(167, 3, 3, 0.18) 0px 2px 4px; */
+
 }
 
 .loginContainer__loginButton>button {
@@ -97,7 +103,7 @@ input {
 }
 
 .loginContainer__loginButton>button:hover {
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     color: rgb(252, 248, 246);
 }
 
@@ -119,14 +125,15 @@ input {
 }
 
 .loginContainer__registerButton>button:hover {
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     color: rgb(250, 246, 243);
     cursor: pointer;
 }
 
 
 .topButton {
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;} */
+}
 
 .topButton>button {
     font-size: 15px;

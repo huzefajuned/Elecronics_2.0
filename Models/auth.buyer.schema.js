@@ -16,6 +16,6 @@ const buyerSchema = new mongoose.Schema({
     }
     
 })
-const User = mongoose.model("User", buyerSchema);
-module.exports = User;
+const authBuyerSchema = mongoose.model("authBuyerSchema", buyerSchema);
+module.exports = authBuyerSchema;
 

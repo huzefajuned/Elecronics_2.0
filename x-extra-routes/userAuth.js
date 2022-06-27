@@ -10,7 +10,7 @@ const middleAuth = require('../middleware/middleAuth')
 
 require('../Connection/DataBase');
 // const User = require('../Models/userSchema');
-const User = require('../Models/auth.buyer.schema')
+const authBuyerSchema = require('../Models/auth.buyer.schema')
 
 //Regsiter Route.......
 
@@ -20,16 +20,16 @@ router.post("/User/Register", async (req, res) => {
 
     try {
 
-        const userExist = await User.findOne({ email });
+        const userExist = await authBuyerSchema.findOne({ email });
         if (userExist) {
-            res.status(400).json({ message: "Email Exists" });
+            res.status(400).send({ message: "Email Exists" });
             return;
         }
 
         const salt = await bcrypt.genSalt(10);
         const secPassword = await bcrypt.hash(password, salt)
 
-        const newUser = await new User({
+        const newUser = await new authBuyerSchema({
             name: req.body.name,
             email: req.body.email,
             password: req.body.secPassword,
@@ -37,12 +37,12 @@ router.post("/User/Register", async (req, res) => {
 
         const user = await newUser.save();
         if (user) {
-            res.status(200).json({ message: "user Registered Successfully" });
+            res.status(200).send({ message: "user Registered Successfully" });
         }
 
 
     } catch (error) {
-        res.status(401).json({ message: "Internal Server Error " });
+        res.status(401).send({ message: "Internal Server Error " });
 
     }
 
@@ -94,13 +94,15 @@ router.post("/User/Register", async (req, res) => {
 // })
 
 
-//Login Route...
+//Login Route...≠+
 router.post('/User/Login', async (req, res) => {
-    const { email, password } = req.body;
+    const email = req.body;
 
     try {
-        const userLogin = await User.findOne({ email });
+        const userLogin = await authBuyerSchema.findOne({ email: req.body });
         if (!userLogin) {
+            console.log(userLogin)
+
             return res.status(401).json({ Message: "Invalid Credentials" });
         }
         const passwordCompare = bcrypt.compare(password, userLogin.password);
@@ -114,6 +116,7 @@ router.post('/User/Login', async (req, res) => {
                 id: userLogin.id
             }
         }
+        console.log(data)
         const authtoken = jwt.sign(data, JWT_SECRET,
             // { expiresIn: "500s" }
         );
@@ -139,7 +142,7 @@ router.get("/User/getUser", middleAuth, async (req, res) => {
     try {
         userId = req.user.id;
 
-        const user = await User.findById(userId).select("-password");
+        const user = await authBuyerSchema.findById(userId).select("-password");
         console.log("Current Logged UserId-", userId);
         res.send(user);
         // console.log("user",user)

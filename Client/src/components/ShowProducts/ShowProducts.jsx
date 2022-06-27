@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import styles from "./ShowProducts.module.css";
 import { useNavigate } from 'react-router-dom'
-import moreIcon from '../../images/more-icon.png'
+// import moreIcon from '../../images/more-icon.png'
 import { BsHeart } from 'react-icons/bs'
 
 function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
@@ -15,7 +15,8 @@ function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
   }
 
   //View MOre Products   
-  const [visible, setVisible] = useState(8)
+  const [visible, setVisible] = useState(8);
+  console.log(visible)
   const showMore = () => {
     alert("hover on Onhever")
     setVisible((preValue => preValue + 4))
@@ -29,7 +30,7 @@ function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
       <div className={styles.showProductsCard__container}  >
 
         {prodData.map((currentElem) => {
-          const { _id, image, price, model, category } = currentElem;
+          const {   price, model } = currentElem;
 
           return (<>
             <div  className={styles.showProductsSingle__card} >

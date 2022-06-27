@@ -20,12 +20,13 @@ const AllRoutes = ({ prod, isLoggedIn, setIsLoggedIn, loadProductData, prodData,
     return (
         <>
             <div>
-                <Header
+                {/* <Header
                     isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}
                     searchItem={searchItem} setSearchItem={setSearchItem}
                     cart={cart}
-                />
+                /> */}
                 <Routes>
+
                     <Route path="/" element={<HomePage cart={cart} setCart={setCart} prod={prod}
                         loadProductData={loadProductData} prodData={prodData}
                         searchItem={searchItem} setSearchItem={setSearchItem}
@@ -43,7 +44,7 @@ const AllRoutes = ({ prod, isLoggedIn, setIsLoggedIn, loadProductData, prodData,
 
             {/* **********Routes for Admins Only *************** */}
             <Routes>
-                <Route path="Admin" element={<Admin />} >
+                <Route path="Seller_Dashboard" element={<Admin />} >
                     <Route path="" element={<Home />} />
                     <Route path="Home" element={<Home />} />
                     <Route path="Products" element={<Products />} />

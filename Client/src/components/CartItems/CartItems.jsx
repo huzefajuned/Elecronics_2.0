@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
+import Header from "../Header/Header";
 import "./CartItems.module.css";
 import styles from "./CartItems.module.css";
 const CartItems = ({ cart, setCart, handleChange }) => {
@@ -26,6 +27,9 @@ const CartItems = ({ cart, setCart, handleChange }) => {
   return (
 
     <>
+
+        <Header />
+
       <div className={styles.cartItems__container}>
         <div className={styles.cartItemsContainer__leftSide}>
           {cart.map((prod) => (

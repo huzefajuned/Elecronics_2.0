@@ -45,11 +45,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header
+        {/* <Header
           isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}
           searchItem={searchItem} setSearchItem={setSearchItem}
           cart={cart}
-        />
+        /> */}
         <AllRoutes
           isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}
           loadProductData={loadProductData} prodData={prodData}

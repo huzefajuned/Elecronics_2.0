@@ -10,6 +10,7 @@ const DataBase =
         .catch(
             (error) => {
                 console.log("Error To Connection DataBase" + error)
+                res.status(404).send({message:"error to connection"})
                 exit(1)
             }
         )

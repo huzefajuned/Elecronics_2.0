@@ -3,6 +3,7 @@ import styles from "../Login/Login.module.css";
 import axios from "axios";
 import { toast, } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header/Header";
 
 const Login = ({ isLoggedIn, setIsLoggedIn }) => {
   const navigate = useNavigate();
@@ -51,15 +52,15 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
       localStorage.setItem("authToken", data.token);
     }
     catch (error) {
-      alert(error)
+      toast.error(error.data)
     }
 
-    if(200){
-      alert("Reistered");
-      setlogin(true)
-    } else{
-      alert("Error To Register")
-    }
+    // if (200) {
+    //   alert("Reistered");
+    //   setlogin(true)
+    // } else {
+    //   alert("Error To Register")
+    // }
 
   }
 
@@ -81,16 +82,21 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
         localStorage.setItem("jwt-token", resp.data.authtoken);
       })
 
-      .catch((err) => {
-        alert(err)
-        // toast.error("Error To uSER")
+      .catch((respo) => {
+
+        toast.error(respo.data.Message)
       });
 
 
   }
 
   return (
+
+
     <>
+
+      <Header />
+
       {
         !login ? (<>
           <div className={styles.login__container}>

@@ -2,11 +2,14 @@ import React from "react";
 import styles from "./Cart.module.css";
 import { Link } from "react-router-dom";
 import CartItems from "../CartItems/CartItems";
+import Header from "../Header/Header";
 
 const Cart = ({ cart, setCart }) => {
   // console.log(cart)
   return (
     <>
+      <Header />
+
       <header>
         <div className={styles.cart__container}>
           {/* <div className={styles.cartLeftContainer__header}>
