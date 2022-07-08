@@ -54,7 +54,7 @@ const sellerLogin = async (req, res) => {
 
     try {
         if (!email || !password) {
-            res.status(200).send({ message: "fill all Fields" });
+            res.status(200).send({ message: "fill all Field okkk" });
             return;
         }
         const sellerLogin = await AuthSellerSchema.findOne({ email: req.body.email });
@@ -63,24 +63,18 @@ const sellerLogin = async (req, res) => {
             const comparePass = await bcrypt.compare(req.body.password, sellerLogin.password);
 
             if (comparePass) {
-                // res.status(201).send({ message: "seller LoggedIn " })
-                const token = jwt.sign({ email }, config, {
-                    algorithm: "HS256",
-                    expiresIn: '24h',
-                });
-                console.log("token", token);
-                res.status(200).json({
-                    message: 'Seller Logged In!',
-                    token: token,
-                    success: true,
+                jwt.sign({ sellerLogin }, config, {
+                    algorithm: "HS256", expiresIn: '24h',
+                }, (err, token) => {
+
+                    res.status(201).send({ sellerLogin, auth: token, message: 'Seller Logged In!', })
+                    // console.log(token.auth)
 
                 });
-
             } else {
                 res.status(202).send({ message: "Wrong username or password." });
 
             }
-            console.log(sellerLogin)
         } else {
             res.status(202).send({ message: "Not a seller" });
 
@@ -91,12 +85,14 @@ const sellerLogin = async (req, res) => {
     }
 
 }
-const index = (req, res) => {
-    res.json({
-        success: true,
-        message: 'Index page'
-    })
-};
 
 
-module.exports = { sellerRegister, sellerLogin, index }
+// const index = (req, res) => {
+//     res.json({
+//         success: true,
+//         message: 'Index page'
+//     })
+// };
+
+
+module.exports = { sellerRegister, sellerLogin }

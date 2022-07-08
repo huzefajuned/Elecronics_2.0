@@ -5,7 +5,7 @@ import { toast, } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 
-const Login = ({ isLoggedIn, setIsLoggedIn }) => {
+const Login = ({ cart, isLoggedIn, setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   const [login, setlogin] = useState(false);
@@ -95,7 +95,7 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
 
     <>
 
-      <Header />
+      <Header cart={cart} />
 
       {
         !login ? (<>

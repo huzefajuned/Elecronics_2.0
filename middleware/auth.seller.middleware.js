@@ -1,36 +1,26 @@
-const express = require("express");
 const jwt = require("jsonwebtoken");
 const config = "mysecretkeyishere"
 
 
 
-let checkToken = (req, res, next) => {
-        let token = req.headers['x-access-token'] || req.headers['authorization']; // Express headers are auto converted to lowercase
-        if (token?.startWith('Bearer ')) {
-                // Remove Bearer from string
-                token = token.slice(7, token.length);
-        }
+const verifyToken = (req, res, next) => {
 
+        let token = req.headers[`authorization`];
         if (token) {
-                jwt.verify(token, config, (err, decoded) => {
+                token = token.split(' ')[1];
+                jwt.verify(token, config, (err, user) => {
                         if (err) {
-                                return res.json({
-                                        success: false,
-                                        message: 'Token is not valid'
-                                });
-                        } else {
-                                req.decoded = decoded;
+                                res.send({ message: "plase provide a  token" })
+                        }
+                        else {
+                                req.user = user;
                                 next();
                         }
-                });
+                })
         } else {
-                return res.json({
-                        success: false,
-                        message: 'Auth token is not supplied'
-                });
+                res.status(200).send({ message: "plase add valid token" })
         }
-};
-
-module.exports = {
-        checkToken: checkToken
 }
+
+
+module.exports = verifyToken;

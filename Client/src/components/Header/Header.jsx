@@ -35,7 +35,7 @@ const Header = ({ cart, isLoggedIn, size, searchItem, setSearchItem }) => {
             </div>
 
             <h2>
-              
+
             </h2>
             {/* {loggedIn.user} */}
 
@@ -81,6 +81,7 @@ const Header = ({ cart, isLoggedIn, size, searchItem, setSearchItem }) => {
                 <img src={cartimg}
                   width='50px' alt="" style={{ padding: '0px' }} />
                 <span className={styles.shoppingCart__number}>
+
                   {cart?.length}
                 </span>
               </div>

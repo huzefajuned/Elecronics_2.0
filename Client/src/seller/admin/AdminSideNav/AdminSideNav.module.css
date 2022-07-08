@@ -29,6 +29,13 @@
     font-family: 'Libre Baskerville', serif;
     background-color: beige;
 }
+span{
+    color: rgb(49, 127, 8);
+    /* background-color: red; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    padding: 10px;
+}
 
 .inner {
     display: flex;

@@ -26,7 +26,9 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-color: #9cdaf8;
+    background-image: linear-gradient(315deg, #9cdaf8 0%, #98fcbd 74%);
+    /* background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
 }
 
 .preview {
@@ -59,10 +61,11 @@
 }
 
 .heading {
-    color: #963434;
+    color: #800062;
     font-size: 25px;
     text-align: center;
     font-family: 'Stoke', serif;
+    text-shadow: 2px 2px #d7caca;
     padding: 10px;
     margin: 0px 0px 30px 0px;
     /* background-color: #999; */
@@ -91,30 +94,35 @@
     font-family: Courier;
 }
 
-.checkbox {
-    margin: auto;
-    width: 80%;
+/* .checkbox {
     text-align: center;
-    justify-content: space-between;
-    padding: 10px;
-}
+    padding: 0px;
+    width: 100%;
+} */
+
+/* .checkbox>input {
+    background-color: black;
+    display: flex;
+} */
 
 .buttons {
     width: 83%;
     height: 50px;
     border: none;
     cursor: pointer;
-    font-size: 15px;
-    color: rgb(9, 9, 9);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
     margin: 5px 0px 0px 8.3%;
-    background-color: rgba(202, 203, 214, 0.332);
+    background-color: #c73e1d;
+    background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .buttons:hover {
-    background-color: rgb(6, 6, 112);
-    color: rgb(244, 238, 238);
+    background-color: #44b09e;
+    background-image: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%);
+    color: rgb(6, 157, 31);
     cursor: pointer;
 
 }

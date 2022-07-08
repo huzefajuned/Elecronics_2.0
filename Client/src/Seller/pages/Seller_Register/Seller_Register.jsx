@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { toast } from 'react-toastify';
 import styles from './Seller_Register.module.css'
 import { useNavigate } from 'react-router-dom'
@@ -65,8 +65,15 @@ const Seller_Register = (props) => {
     }
 
 
+    useEffect(() => {
+        const auth = localStorage.getItem("user");
+        if (auth) {
+            navigate('Seller_Dashboard')
+        }
+    }, [])
+
     //seller Registration Onclick Event handler
-    const Login_Click = (e) => {
+    const Login_Click = async (e) => {
         e.preventDefault();
         const config = {
             header: {
@@ -74,26 +81,34 @@ const Seller_Register = (props) => {
             }
         }
 
-        axios.post("/sellerLogin", {
-
+        let result = await axios.post("/sellerLogin", {
             email, password
         }, config)
-            .then((response) => {
 
+            .then((response) => {
+                // result = await result.json();
+                console.log(response)
+
+                if (response.data.auth) {
+                    localStorage.setItem("user", JSON.stringify(response.data.sellerLogin));
+                    localStorage.setItem("token", JSON.stringify(response.data.auth));
+
+
+                }
                 if (response.status === 200) {
                     toast.error(response.data.message);
                 }
                 if (response.status === 201) {
+
                     toast.success(response.data.message);
                     navigate("Seller_Dashboard")
-
                 }
                 if (response.status === 202) {
-                    toast.success(response.data.message)
+                    toast.error(response.data.message)
                 }
 
-            })
 
+            })
         // alert("okkkkk")
     }
 

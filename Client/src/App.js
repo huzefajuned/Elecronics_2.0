@@ -19,7 +19,7 @@ function App() {
     loadProductData();
   }, [])
   const loadProductData = () => {
-    axios.get('/item').then((resp) => {
+    axios.get('/allItems').then((resp) => {
       setProdData(resp.data);
     })
   }

@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../AdminSideNav/AdminSideNav.module.css'
-import { useNavigate, Link, Outlet,useLocation } from 'react-router-dom'
+import { useNavigate, Link, Outlet, useLocation } from 'react-router-dom'
 import { FaHome } from 'react-icons/fa'
 import { BiFolderPlus } from 'react-icons/bi'
 import { HiDatabase } from 'react-icons/hi'
@@ -35,13 +35,37 @@ const AdminSideNav = () => {
 
   };
 
+  // *** retrieving Current User ....
+
+  const [currentUser, setCurrentUser] = useState('')
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setCurrentUser(foundUser);
+    }
+  }, []);
+
+  // console.log(currentUser.email)
+
+  // *** Deleting Current User from localStorage
+
+  const removeCurrentUser = () => {
+    alert("Seller LogOut");
+
+    localStorage.removeItem("user");
+    navigate('/')
+  }
+
+
   return (
     <>
       <div className={styles.container}>
 
         <div className={styles.top}>
           <h3 className={styles.header} onClick={() => navigate('/')}> Admin Panel</h3>
-          <h5 className={styles.user}>Logged as Salman khan</h5>
+          <h5 className={styles.user}>    Seller As <span>{currentUser.name}  </span> </h5>
         </div>
 
         <div className={styles.inner}>
@@ -56,7 +80,8 @@ const AdminSideNav = () => {
               <li><a> {<CgRecord className={styles.icons} />} Pending Order</a></li>
               <li><a> {<CgRecord className={styles.icons} />} Orders</a></li>
               <li><a> {<CgProfile className={styles.icons} />} Profile</a></li>
-              <li><a> {<AiOutlineLogout className={styles.icons} />} Logout</a></li>
+              <li onClick={() => removeCurrentUser()}><a> {<AiOutlineLogout className={styles.icons} />} Logout</a></li>
+
             </ul>
           </nav>
           <div className={styles.display_content}>

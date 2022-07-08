@@ -30,7 +30,9 @@ const Upload = (props) => {
 
         axios.post('/item', formdata, {
             headers: {
-                "Content-type": "multipart/form-data"
+                "Content-type": "multipart/form-data",
+                authorization: ` bearer ${JSON.parse(localStorage.getItem("token"))}`
+
             }
         })
             .then((res) => {
@@ -72,12 +74,13 @@ const Upload = (props) => {
                                 <option value="Laptop">Laptop</option>
                             </select>
                         </div>
-                        <div className={styles.checkbox}>
-                            <input type="checkbox" name="" id="" placeholder='' />
-                            want to sell faster?
+
+
+                        {/* <div className={styles.checkbox}>
+                            <input type="checkbox" name="" id="" placeholder='want to sell faster?' value="want to sell faster?" />
                             <input type="checkbox" name="" id="" placeholder='' />
                             offers available
-                        </div>
+                        </div> */}
                         <button className={styles.buttons} onClick={handleSubmitFormData2} disabled={!image || !price || !model || !description || !category ? true : false} > Add Item</button>
                     </form>
 

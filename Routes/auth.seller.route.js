@@ -11,7 +11,7 @@ router.post("/sellerRegister", authSellerController.sellerRegister);
 //for admin-login
 router.post("/sellerLogin", authSellerController.sellerLogin);
 
-router.get("/sellerLogin", middleware.checkToken, authSellerController.index);
+// router.get("/sellerLogin", middleware.checkToken, authSellerController.index);
 
 
 

@@ -9,9 +9,9 @@
   bottom: 0px;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  width: 90vw;
+  width: 98vw;
   margin: auto;
-  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+  /* background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%); */
 }
 
 .showProductsHeader__container {
@@ -96,7 +96,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 220px;
+  width: 223px;
   margin: 1px auto 2px auto;
   border-radius: 5px;
 

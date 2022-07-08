@@ -1,7 +1,7 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import styles from "./ShowProducts.module.css";
 import { useNavigate } from 'react-router-dom'
-// import moreIcon from '../../images/more-icon.png'
+import moreIcon from '../../images/more-icon.png'
 import { BsHeart } from 'react-icons/bs'
 
 function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
@@ -15,11 +15,11 @@ function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
   }
 
   //View MOre Products   
-  const [visible, setVisible] = useState(8);
+  const [visible, setVisible] = useState(12);
   console.log(visible)
   const showMore = () => {
-    alert("hover on Onhever")
-    setVisible((preValue => preValue + 4))
+    // alert("hover on Onhever")
+    setVisible((preValue => preValue + 6))
   }
 
   //Filter Category .... 
@@ -29,11 +29,12 @@ function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
       {/* //showProductsCard__container */}
       <div className={styles.showProductsCard__container}  >
 
-        {prodData.map((currentElem) => {
-          const {   price, model } = currentElem;
+        {prodData.slice(0, visible
+        ).map((currentElem) => {
+          const { price, model } = currentElem;
 
           return (<>
-            <div  className={styles.showProductsSingle__card} >
+            <div className={styles.showProductsSingle__card} >
               <img className={styles.showProductsSingle__cardImg} src={currentElem.image} alt="CARD__IMG" onClick={() => navToViewPage(currentElem)} />
               <h4 className={styles.showProductsSingle__cardModel}> {model} </h4>
               <h4 className={styles.showProductsSingle__cardPrice}> ₹{price} </h4>
@@ -45,14 +46,14 @@ function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
         })}
       </div>
       {/* ++++++++++ Show More Button +++++++++++ */}
-      <button className={styles.showMore} onClick={showMore}>
+      {/* <button className={styles.showMore} onClick={showMore}>
         Slow More
-      </button>
+      </button> */}
 
       {/* ++++++++++ Show More Button +++++++++++ */}
-      {/* <div className={styles.showmore__button} onMouseOver={showMore}>
-        <img src={moreIcon} alt=" viewMoreIcon" />
-      </div> */}
+      <div className={styles.showmore__button} >
+        <img onMouseOver={() => showMore()} src={moreIcon} alt=" viewMoreIcon" />
+      </div>
 
     </div>
   );

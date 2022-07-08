@@ -29,7 +29,7 @@ const HomePage = ({ cart, setCart, prodData, searchItem, setSearchItem, handleCl
   return (
     <>
 
-      <Header />
+      <Header cart={cart} />
 
       {/* ============== Sliders HomePage =============== */}
       <div className={styles.slide__container}>
