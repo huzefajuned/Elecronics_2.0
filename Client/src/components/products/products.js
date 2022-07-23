@@ -35,7 +35,7 @@ const cartItems = [
 
 export default cartItems;
 
-export const slideImages = [
+export const SliderData = [
   {
     id: 9,
     url: "https://m.media-amazon.com/images/I/71zBGVPtAKL._SX3000_.jpg",

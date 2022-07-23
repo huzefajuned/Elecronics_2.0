@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import CartItems from "../CartItems/CartItems";
 import Header from "../Header/Header";
 
-const Cart = ({ cart, setCart }) => {
+const Cart = ({ cart, setCart, isLoggedIn, setIsLoggedIn}) => {
   // console.log(cart)
   return (
     <>
-      <Header />
+      <Header cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
 
       <header>
         <div className={styles.cart__container}>

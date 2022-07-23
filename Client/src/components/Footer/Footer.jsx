@@ -10,12 +10,7 @@ const Footer = () => {
     const navigate = useNavigate()
     const [popup, setPopup] = useState(false)
     const upload = () => {
-        // setActive(!active);
-        // navigate('Upload')
-        // navigate("Seller_Dashboard");
         setPopup(true);
-
-
     };
 
 

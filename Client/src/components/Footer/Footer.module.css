@@ -1,7 +1,8 @@
 .footer__container{
     display: flex;
-    border:  1px solid rgb(224, 222, 222);
-    background-color: rgb(36, 35, 34);
+    border:  2px solid rgb(224, 222, 222);
+    /* background-color: rgb(36, 35, 34); */
+    background-color: wheat;
     border-radius: 10px;
     padding: 20px;
     overflow: hidden;

@@ -1,114 +1,43 @@
-.showProducts__container {
+.container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
   bottom: 0px;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  width: 98vw;
-  margin: auto;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
   /* background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%); */
 }
 
-.showProductsHeader__container {
-  display: block;
-  justify-content: center;
-}
 
-.showProductsHeader__heading>h2 {
-  color: rgb(46, 46, 49);
-  text-align: center;
-  font-size: 30px;
-  padding-top: 5px;
-  font-family: 'Ramaraja', serif;
-  letter-spacing: 2px;
-}
-
-.showProductsHeader__buttons {
-  text-align: center;
-
-}
-
-.showProductsHeader__buttons>button {
-  width: 200px;
-  height: 30px;
-  cursor: pointer;
-  text-align: center;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  justify-content: center;
-  font-family: 'Ramaraja', serif;
-  letter-spacing: 2px;
-  border: 1px solid rgb(218, 214, 207);
-  border-radius: 4px;
-  border: none;
-  background-color: rgb(95, 158, 123);
-}
-
-.showProductsHeader__buttons>button:hover {
-  background-color: rgb(5, 5, 78);
-  color: azure;
-  border-radius: 4px;
-}
-
-.showProductsCard__container {
+.innerContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
   flex-direction: row;
 }
 
-/* ++++showProductsInner+++ */
-.showProducts__inner {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-
-}
-
-.showProductsInner__search {
-  text-align: center;
-  padding: 20px;
-
-}
-
-.showProductsInner__search>input {
-  max-width: 400px;
-  height: 35px;
-  text-align: center;
-  font-size: 18px;
-  color: black;
-  font-weight: 500;
-  border: none;
-  border-radius: 20px;
-  border: 1px solid rgb(57, 58, 57);
-  box-shadow: rgba(20, 19, 19, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-
-
-.showProductsSingle__card {
-  background-color: rgb(255, 255, 255);
+.card {
+  /* background-color: rgb(241, 234, 234); */
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 223px;
-  margin: 1px auto 2px auto;
+  height: auto;
+  margin: 2px auto 0px auto;
   border-radius: 5px;
 
 }
 
-.showProductsSingle__card:hover {
+.card:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(145, 46, 46, 0.25) 0px 0.125em 0.5em, rgba(135, 4, 4, 0.1) 0px 0px 0px 1px inset;
   cursor: pointer;
 }
 
-.showProductsSingle__cardImg {
-  width: 90%;
+.cardImg {
+  width: 80%;
   height: 200px;
   object-fit: contain;
   align-items: center;
@@ -116,7 +45,7 @@
   padding: 0px;
 }
 
-.showProductsSingle__cardPrice {
+.cardPrice {
   object-fit: contain;
   text-align: center;
   font-family: 'Libre Baskerville', serif;
@@ -125,14 +54,14 @@
 
 }
 
-.showProductsSingle__cardModel {
+.cardModel {
   text-align: center;
   font-family: 'Libre Baskerville', serif;
 
 }
 
 
-.showProducts__addToCartButton {
+.addCart {
   text-align: center;
   margin: 5px auto;
   justify-content: center;
@@ -147,7 +76,7 @@
   /* opacity: 0; */
 }
 
-.showProducts__addToCartButton:hover {
+.addCart:hover {
   background-color: rgb(5, 5, 78);
   color: azure;
   border-radius: 4px;
@@ -157,33 +86,25 @@
 
 /* ===========showmore__button */
 
-.showmore__button {
+.showMore {
   width: 90vw;
   margin: auto;
 }
 
-.showmore__button>img {
+.showMore>button {
   border: none;
-
-  float: right;
-  /* border: 1px solid rgb(190, 132, 23); */
+  color: rgb(39, 122, 196);
   border-radius: 5px;
-  color: aliceblue;
-  background-color: rgb(255, 255, 255);
-  width: 50px;
-  height: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 50px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   cursor: pointer;
+  margin: 10px;
 
 }
 
 .showmore__button>button:hover {
-  color: rgb(253, 251, 251);
-  background-color: rgb(65, 73, 70);
+  color: rgb(17, 154, 7);
+  background-color: rgb(190, 195, 193);
   cursor: pointer;
 }
 
@@ -197,12 +118,46 @@
 
 .heart_icon:hover {
   color: black;
-  
+
 }
-/* ++++ showMore button */
-.showMore{
-  padding: 10px;
-  border: none;
-  background-color: #2b0a37;
-  color: palegreen;
+
+
+@media screen and (max-width:420px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .innerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .card {
+    width: 49%;
+    height: auto;
+    /* background-color: rgb(72, 154, 47); */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1px auto 2px auto;
+    border-radius: 5px;
+    padding: 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(145, 46, 46, 0.25) 0px 0.125em 0.5em, rgba(135, 4, 4, 0.1) 0px 0px 0px 1px inset;
+
+  }
+
+  .cardImg {
+    width: 95%;
+    height: 100px;
+    object-fit: contain;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
 }

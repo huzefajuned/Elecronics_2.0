@@ -8,7 +8,7 @@ import Header from "../../components/Header/Header";
 const Login = ({ cart, isLoggedIn, setIsLoggedIn }) => {
   const navigate = useNavigate();
 
-  const [login, setlogin] = useState(false);
+  const [login, setlogin] = useState(true);
   // const [color, setColor] = useState('green');
   //Simple state for Data INput For REgsitration.....
   const [loggedIn, SetLoggedIn] = useState({
@@ -95,7 +95,7 @@ const Login = ({ cart, isLoggedIn, setIsLoggedIn }) => {
 
     <>
 
-      <Header cart={cart} />
+      <Header cart={cart}  />
 
       {
         !login ? (<>

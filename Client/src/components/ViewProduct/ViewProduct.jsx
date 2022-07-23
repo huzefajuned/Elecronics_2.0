@@ -3,13 +3,13 @@ import styles from '../ViewProduct/ViewProduct.module.css'
 import { useLocation } from 'react-router-dom'
 import Header from '../Header/Header';
 
-const ViewProduct = () => {
+const ViewProduct = ({ cart , setCart  ,isLoggedIn,setIsLoggedIn}) => {
     const location = useLocation();
     console.log(location)
     return (
 
         <>
-                <Header />
+            <Header  cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
 
             <div className={styles.viewprod__container}>
                 <div className={styles.viewprod__left}>

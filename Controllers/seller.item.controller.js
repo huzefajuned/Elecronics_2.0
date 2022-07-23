@@ -1,5 +1,4 @@
 const multer = require("multer");
-
 const sellerItemSchema = require('../Models/seller.item.schema');
 
 // *************
@@ -44,9 +43,9 @@ const insert = async (req, res) => {
 }
 
 //READ ALL ITEMS
-const read = (req, res) => {
-    try {
-        sellerItemSchema.find({}, (err, result) => {
+const read = async (req, res) => {
+    try { 
+       await  sellerItemSchema.find({}, (err, result) => {
             if (err) {
                 res.send(err)
             }
@@ -56,6 +55,26 @@ const read = (req, res) => {
         console.log(error)
     }
 }
+
+//  filtering  item through search
+const seacrh =  (req, res) => {
+
+
+    try {
+        var regex = new RegExp(req.params.model, 'i');
+        console.log(regex)
+        sellerItemSchema.find({ model: regex }).then((result) => {
+            res.status(200).json(result);
+
+        })
+    } catch (error) {
+        console.log(error)
+
+    }
+
+
+}
+
 
 //deleting a single item
 const deleteById = (req, res) => {
@@ -97,4 +116,4 @@ const checkT = (req, res) => {
     res.json({ message: "checkTclicked" })
 
 }
-module.exports = { read, insert, deleteById, updateById, upload, checkT }
+module.exports = { read, seacrh, insert, deleteById, updateById, upload, checkT }

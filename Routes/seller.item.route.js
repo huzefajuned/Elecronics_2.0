@@ -10,6 +10,8 @@ router.post('/item', verifyToken, sellerItemController.upload.single("image"), s
 //Retriving all items
 router.get('/item', verifyToken, sellerItemController.read);
 
+//  filtering  item through search
+router.get("/item/search/:model", sellerItemController.seacrh)
 
 //Retriving all items
 router.get('/allItems', sellerItemController.read);

@@ -14,7 +14,6 @@ const buyerSchema = new mongoose.Schema({
         type: String,
 
     }
-    
 })
 const authBuyerSchema = mongoose.model("authBuyerSchema", buyerSchema);
 module.exports = authBuyerSchema;

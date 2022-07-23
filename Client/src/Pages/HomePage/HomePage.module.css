@@ -1,18 +1,37 @@
-.slide__container {
-  margin: 85px auto;
+.carousel {
+  /* marginauto; */
   border-radius: 5px;
-  width: 96vw;
-  height: 60vh;
-  /* background-image: linear-gradient(to right top, #e5e5e5, #c3c3c3, #a2a2a2, #828282, #646464); */
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  width: 50vw;
+  height: 10px;
+  /* height: 00px; */
+
+  /* position: fixed;
+  top: 0px; */
+  /* height: 60vh; */
+  margin: auto;
+
+  background-image: linear-gradient(
+    to right top,
+    #e5e5e5,
+    #c3c3c3,
+    #a2a2a2,
+    #828282,
+    #646464
+  );
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.show__images {
-  width: 100%;
-  height: 60vh;
+.carouselImages {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
 }
 
 /* // Css for items ..... */
@@ -64,9 +83,8 @@
   font-weight: 800;
   margin-left: 20%;
   text-shadow: 1px 0px 2px rgb(29, 31, 31);
-  font-family: 'Ramaraja', serif;
+  font-family: "Ramaraja", serif;
   letter-spacing: 2px;
-
 }
 
 .item__model {
@@ -84,8 +102,7 @@
   display: flex;
   margin: auto auto 20px auto;
   text-align: center;
-  font-family: 'Libre Baskerville', serif;
-
+  font-family: "Libre Baskerville", serif;
 }
 
 /*  ****************offercard__container--------- */
@@ -120,15 +137,17 @@
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .single__card:hover {
-
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.single__card>button {
+.single__card > button {
   width: 100px;
   height: 30px;
   cursor: pointer;
@@ -136,24 +155,22 @@
   margin-right: 20px;
   margin-bottom: 10px;
   justify-content: center;
-  font-family: 'Ramaraja', serif;
+  font-family: "Ramaraja", serif;
   letter-spacing: 2px;
   border: 1px solid rgb(218, 214, 207);
   border-radius: 4px;
   border: none;
 }
 
-.single__card>button:hover {
+.single__card > button:hover {
   color: white;
   background-color: rgb(9, 9, 65);
   cursor: pointer;
 }
 
-
 /* ******* css for maxwidth 320px----- */
 
-@media screen and (max-width:380px) {
-
+@media screen and (max-width: 380px) {
   .slide__container {
     width: 100%;
     margin: 50px auto;
@@ -163,8 +180,56 @@
 
   .show__images {
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     background-size: cover;
   }
+}
 
+
+/* ************************** slider */
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
 }

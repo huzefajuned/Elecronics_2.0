@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import Header from "../Header/Header";
 import "./CartItems.module.css";
 import styles from "./CartItems.module.css";
-const CartItems = ({ cart, setCart, handleChange }) => {
+const CartItems = ({ cart, setCart, isLoggedIn, setIsLoggedIn, handleChange }) => {
   // console.log("cart is her", cart)
   const [totalItem, setTotalItem] = useState('0')
   const [totalPrice, setTotalPrice] = useState('');
@@ -28,7 +28,7 @@ const CartItems = ({ cart, setCart, handleChange }) => {
 
     <>
 
-        <Header />
+      <Header cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
 
       <div className={styles.cartItems__container}>
         <div className={styles.cartItemsContainer__leftSide}>

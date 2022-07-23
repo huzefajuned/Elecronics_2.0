@@ -20,25 +20,20 @@ const AllRoutes = ({ prod, isLoggedIn, setIsLoggedIn, loadProductData, prodData,
     return (
         <>
             <div>
-                {/* <Header
-                    isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}
-                    searchItem={searchItem} setSearchItem={setSearchItem}
-                    cart={cart}
-                /> */}
                 <Routes>
-
                     <Route path="/" element={<HomePage cart={cart} setCart={setCart} prod={prod}
                         loadProductData={loadProductData} prodData={prodData}
                         searchItem={searchItem} setSearchItem={setSearchItem}
                         handleClick={handleClick}
                         size={size}
+                        isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}
                     />} />
 
-                    <Route path="/Cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange} size={size} />} />
-                    <Route path="/Login" element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
-                    <Route path="/CartItems" element={<CartItems cart={cart} setCart={setCart} handleChange={handleChange} handleClick={handleClick} size={size} />} />
-                    <Route path="/ViewProduct" element={<ViewProduct handleClick={handleClick} />} />
-                    <Route path="/Profile" element={<Profile />} />
+                    <Route path="/Cart" element={<Cart cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} handleChange={handleChange} size={size} />} />
+                    <Route path="/Login" element={<Login cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
+                    <Route path="/CartItems" element={<CartItems cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} handleChange={handleChange} handleClick={handleClick} size={size} />} />
+                    <Route path="/ViewProduct" element={<ViewProduct cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} handleClick={handleClick} />} />
+                    <Route path="/Profile" element={<Profile cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
                 </Routes>
             </div>
 
