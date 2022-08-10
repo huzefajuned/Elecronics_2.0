@@ -60,83 +60,92 @@ const Header = ({ cart, isLoggedIn, size, searchItem, setSearchItem }) => {
   return (
     <>
       {isLoggedIn ? (
-        <nav className={styles.container}>
-          <div className={styles.left} onClick={() => navigate("/")}>
-            <img src={logo} alt="logo" />
-          </div>
-          <div className={styles.right}>
-            {/* **************** */}
-            <div className={styles.search}>
-              <input
-                // className={styles.input__field}
-                type="text"
-                placeholder="Search Available Product "
-                onChange={(e) => setSearch(e.target.value)}
+        <div className={styles.fixedContainer}>
+          <nav className={styles.container}>
+            <div className={styles.left} onClick={() => navigate("/")}>
+              <img src={logo} alt="logo" />
+            </div>
+            <div className={styles.showHamBurger}>
+              <img
+                width="50"
+                src="https://paragondigital.com/wp-content/uploads/Menu-Icon2.jpg"
+                alt="menu"
               />
-              {/* <h2> */}
-              {search === "" ? (
-                <></>
-              ) : (
-                <>
-                  <GrClose
-                    className={styles.close}
-                    onClick={() => clearSearchBox()}
-                  />
-                </>
-              )}
-              {/* </h2> */}
             </div>
-            {/* ************** */}
-            <div className={styles.cart} onClick={() => navigate("/Cart")}>
-              <img src={cartimg} width="40px" alt=" cart_icon" />
-              <span className={styles.CartNumber}>{cart?.length}</span>
-            </div>
-            <FaUser
-              onClick={() => toggleSidebar()}
-              className={styles.userIcon}
-            />
-            {/* <div className={styles.logout__button}> */}
-            <div
-              className={
-                sidebar === true
-                  ? `${
-                      (styles.dropdown__items.active,
-                      `${styles.dropdown__items}`)
-                    }`
-                  : `${styles.dropdown__items}`
-              }
-            >
-              {" "}
-              {sidebar !== true ? (
-                <> </>
-              ) : (
-                <>
-                  <div className={styles.innerContainer}>
-                    <div>
-                      <hr /> Shaharukh Khan
+            <div className={styles.right}>
+              {/* **************** */}
+              <div className={styles.search}>
+                <input
+                  // className={styles.input__field}
+                  type="text"
+                  placeholder="Search  Available Product after loggged in "
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+                {/* <h2> */}
+                {search === "" ? (
+                  <></>
+                ) : (
+                  <>
+                    <GrClose
+                      className={styles.close}
+                      onClick={() => clearSearchBox()}
+                    />
+                  </>
+                )}
+                {/* </h2> */}
+              </div>
+              {/* ************** */}
+              <div className={styles.cart} onClick={() => navigate("/Cart")}>
+                <img src={cartimg} width="40px" alt=" cart_icon" />
+                <span className={styles.CartNumber}>{cart?.length}</span>
+              </div>
+              <FaUser
+                onClick={() => toggleSidebar()}
+                className={styles.userIcon}
+              />
+              {/* <div className={styles.logout__button}> */}
+              <div
+                className={
+                  sidebar === true
+                    ? `${
+                        (styles.dropdown__items.active,
+                        `${styles.dropdown__items}`)
+                      }`
+                    : `${styles.dropdown__items}`
+                }
+              >
+                {" "}
+                {sidebar !== true ? (
+                  <> </>
+                ) : (
+                  <>
+                    <div className={styles.innerContainer}>
+                      <div>
+                        <hr /> Shaharukh Khan
+                      </div>
+                      <button> Orders</button>
+                      <button onClick={() => navigate("/Profile")}>
+                        Profile
+                      </button>
+                      <button> LogOut</button>
+                      <button onClick={closeSidebar}>
+                        Close
+                        <img
+                          width={20}
+                          src="https://www.freeiconspng.com/uploads/close-icon-png-close-window-icon-png-0.png"
+                          alt=""
+                        />
+                      </button>
                     </div>
-                    <button> Orders</button>
-                    <button onClick={() => navigate("/Profile")}>
-                      Profile
-                    </button>
-                    <button> LogOut</button>
-                    <button onClick={closeSidebar}>
-                      Close
-                      <img
-                        width={20}
-                        src="https://www.freeiconspng.com/uploads/close-icon-png-close-window-icon-png-0.png"
-                        alt=""
-                      />
-                    </button>
-                  </div>
-                </>
-              )}
-              {/* </div> */}
+                  </>
+                )}
+                {/* </div> */}
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       ) : (
-        <div>
+        <div className={styles.fixedContainer}>
           <nav className={styles.container}>
             {/* **************** logo  left side */}
             <div className={styles.left} onClick={() => navigate("/")}>
@@ -144,6 +153,13 @@ const Header = ({ cart, isLoggedIn, size, searchItem, setSearchItem }) => {
             </div>
 
             {/* **************** logo  right side */}
+            <div className={styles.showHamBurger}>
+              <img
+                width="50"
+                src="https://paragondigital.com/wp-content/uploads/Menu-Icon2.jpg"
+                alt="menu"
+              />
+            </div>
             <div className={styles.right}>
               <div className={styles.search}>
                 <input

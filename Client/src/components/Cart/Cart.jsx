@@ -4,11 +4,16 @@ import { Link } from "react-router-dom";
 import CartItems from "../CartItems/CartItems";
 import Header from "../Header/Header";
 
-const Cart = ({ cart, setCart, isLoggedIn, setIsLoggedIn}) => {
+const Cart = ({ cart, setCart, isLoggedIn, setIsLoggedIn }) => {
   // console.log(cart)
   return (
     <>
-      <Header cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Header
+        cart={cart}
+        setCart={setCart}
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+      />
 
       <header>
         <div className={styles.cart__container}>
@@ -31,27 +36,26 @@ const Cart = ({ cart, setCart, isLoggedIn, setIsLoggedIn}) => {
             <div>
               {cart.length > 0 ? (
                 <>
-                  <Link to='/'>
+                  {/* <Link to="/">
                     <img
                       src="https://www.seekpng.com/png/full/155-1554494_operation-last-go-back-previous-comments-go-back.png"
                       alt="back__img"
                       width="50px"
                     />
-                  </Link>
+                  </Link> */}
                   <CartItems cart={cart} setCart={setCart} />
                 </>
               ) : (
-
                 <>
                   <div>
-                    <img src="https://img.freepik.com/free-vector/shopping-cart_1284-672.jpg?t=st=1648132144~exp=1648132744~hmac=13e953e065c6f72b31c7b902673cb81120b5ae1507aac369ea22bba304cdb65e&w=740"
+                    <img
+                      src="https://img.freepik.com/free-vector/shopping-cart_1284-672.jpg?t=st=1648132144~exp=1648132744~hmac=13e953e065c6f72b31c7b902673cb81120b5ae1507aac369ea22bba304cdb65e&w=740"
                       style={{
                         objectFit: "cover",
-                        width: '100%'
+                        width: "100%",
                       }}
-
-
-                      alt="" />
+                      alt=""
+                    />
                   </div>
                 </>
               )}

@@ -1,11 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const sellerSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    password: String
-})
+  name: String,
+  email: String,
+  password: String,
+});
 
-
-const authSellerSchemas = mongoose.model('Auth_Seller_DB', sellerSchema);
+const authSellerSchemas = mongoose.model("Auth_Seller_DB", sellerSchema);
 module.exports = authSellerSchemas;

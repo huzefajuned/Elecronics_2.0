@@ -27,6 +27,7 @@ function ShowProducts({ prodData, searchItem, setSearchItem, handleClick }) {
         <div className={styles.innerContainer}>
           {prodData.slice(0, visible).map((currentElem) => {
             const { price, model } = currentElem;
+            // console.log(currentElem.images[0]);
 
             return (
               <>

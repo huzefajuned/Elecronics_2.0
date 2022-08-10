@@ -3,16 +3,22 @@ import { toast } from "react-toastify";
 import Header from "../Header/Header";
 import "./CartItems.module.css";
 import styles from "./CartItems.module.css";
-const CartItems = ({ cart, setCart, isLoggedIn, setIsLoggedIn, handleChange }) => {
+const CartItems = ({
+  cart,
+  setCart,
+  isLoggedIn,
+  setIsLoggedIn,
+  handleChange,
+}) => {
   // console.log("cart is her", cart)
-  const [totalItem, setTotalItem] = useState('0')
-  const [totalPrice, setTotalPrice] = useState('');
+  const [totalItem, setTotalItem] = useState("0");
+  const [totalPrice, setTotalPrice] = useState("");
 
   const handleRemove = (_id) => {
     const arr = cart.filter((item) => item._id !== _id);
     setCart(arr);
     // handlePrice();
-    toast.error("Item Removed")
+    toast.error("Item Removed");
   };
 
   // const handlePrice = () => {
@@ -25,10 +31,8 @@ const CartItems = ({ cart, setCart, isLoggedIn, setIsLoggedIn, handleChange }) =
   //   handlePrice();
   // });
   return (
-
     <>
-
-      <Header cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      {/* <Header cart={cart} setCart={setCart} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} /> */}
 
       <div className={styles.cartItems__container}>
         <div className={styles.cartItemsContainer__leftSide}>
@@ -59,6 +63,7 @@ const CartItems = ({ cart, setCart, isLoggedIn, setIsLoggedIn, handleChange }) =
                     Remove From Cart
                   </button>
                 </div>
+                x``
               </div>
             </div>
           ))}
@@ -66,11 +71,14 @@ const CartItems = ({ cart, setCart, isLoggedIn, setIsLoggedIn, handleChange }) =
 
         <div className={styles.cartItemsContainer__rightSide}>
           <div className={styles.cartItemsContainer__rightSideHeader}>
-
             <div>
               <h3>
-                Total  <span style={{ color: "yellow", fontSize: '20px' }}> {cart?.length} </span>Items In Your
-                Shoping Cart
+                Total{" "}
+                <span style={{ color: "yellow", fontSize: "20px" }}>
+                  {" "}
+                  {cart?.length}{" "}
+                </span>
+                Items In Your Shoping Cart
               </h3>
             </div>
             <h2>SubTotal Amount..</h2>
@@ -78,7 +86,6 @@ const CartItems = ({ cart, setCart, isLoggedIn, setIsLoggedIn, handleChange }) =
           </div>
         </div>
       </div>
-
     </>
   );
 };

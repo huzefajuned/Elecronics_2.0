@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Playfair+Display:ital,wght@1,600;1,800&family=Poppins:wght@600&family=Ramaraja&family=Roboto+Mono:ital@0;1&family=Roboto+Slab:wght@500&family=Tapestry&display=swap");
+.showHamBurger {
+  display: none;
+}
+.fixedContainer {
+  position: sticky;
+  top: 0px;
+  height: 6rem;
+  background-color: #ffffff;
+}
 
-.header__container,
 .container {
   display: flex;
   flex-direction: row;
@@ -8,16 +16,9 @@
   justify-content: space-between;
   padding: 0px;
   margin: auto;
-  /* background: transparent; */
-  position: sticky;
-  top: 0px;
   width: 99vw;
-  height: 5.5rem;
   z-index: 999;
   align-items: center;
-  background-color: #ffffff;
-  box-shadow: rgba(158, 25, 25, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .left {
@@ -223,15 +224,47 @@
   background-color: #edf3ee;
 }
 
-/* ***** Css for max-width: 400px */
+/* ***** Css for min-width: 400px  && nax- width: 700px*/
+@media screen and (min-width: 420px) and (max-width: 800px) {
+  .showHamBurger {
+    display: block;
+    background-color: red;
+  }
+  .container {
+    background-color: #087204;
+    z-index: 999;
 
+    position: sticky;
+    top: 0px;
+    /* display: none; */
+  }
+  .right {
+    background-color: #087204;
+    display: none;
+  }
+  .showHamBurger {
+    display: block;
+    background-color: red;
+  }
+  .left {
+    /* border: 1px solid blue; */
+  }
+
+  .left > img {
+    margin: auto;
+    width: 200px;
+  }
+}
+
+/* ***** Css for max-width: 400px */
 @media screen and (max-width: 420px) {
   .container {
     /* background-color: rgb(162, 12, 12); */
     display: flex;
-    position: fixed;
+    position: sticky;
     top: 0px;
     height: 6rem;
+    z-index: 999;
   }
 
   .left {
@@ -265,26 +298,25 @@
     margin: 0px;
     width: 38px;
     height: 38px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     box-shadow: none;
     position: absolute;
     top: 8px;
     right: 10px;
     border-radius: 50px;
+    /* background-color: #393c39; */
   }
 
   .CartNumber {
     padding: 0px;
     margin: 0px;
-    font-size: 15px;
+    font-size: 12px;
     font-family: "Libre Baskerville", serif;
     color: rgb(6, 136, 21);
     font-weight: 500;
     position: absolute;
-    right: 5px;
-    /* margin-left: 23px; */
-    /* margin-left: 99%;
-    margin-bottom: 80%; */
+    top: 3px;
+    right: 2px;
   }
 
   .login__button {
@@ -292,14 +324,18 @@
     position: absolute;
     top: 50px;
     right: 10px;
+    /* background-color: #087204; */
+    padding: 2px;
+    margin: 0px;
   }
 
   .login__button > button {
-    width: 80px;
-    height: 30px;
+    width: 50px;
+    height: 35px;
+    padding: 0px;
     text-align: center;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 15px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     color: rgb(73, 73, 73);
@@ -385,13 +421,14 @@
   }
 
   .dropdown__items {
-    /* background-color: #790f0f; */
+    background-color: #790f0f;
     width: 70vw;
     height: 100vh;
     /* margin: auto; */
     position: fixed;
     left: 0px;
     top: 0px;
+    display: none;
   }
   .innerContainer {
     display: block;

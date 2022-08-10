@@ -9,7 +9,7 @@ import axios from "axios";
 
 function App() {
   const [searchItem, setSearchItem] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState();
   const [prodData, setProdData] = useState([]);
 
   useEffect(() => {
@@ -17,9 +17,11 @@ function App() {
   }, []);
   const loadProductData = () => {
     axios.get("/allItems").then((resp) => {
+      // console.log(resp.data);
       setProdData(resp.data);
     });
   };
+  // console.log(prodData);
   // for Cart.....
   const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
