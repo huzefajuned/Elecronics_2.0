@@ -2,6 +2,7 @@
   "name": "electronics",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
@@ -13,42 +14,27 @@
     "mongodb": "^4.5.0",
     "multer": "^1.4.4",
     "multer-gridfs-storage": "^5.0.2",
-    "react": "^17.0.2",
+    "react": "^18.3.1",
     "react-confirm-box": "^1.2.0",
     "react-custom-scrollbars-2": "^4.4.0",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.3.1",
     "react-icons": "^4.3.1",
     "react-multi-carousel": "^2.8.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.1",
     "react-slideshow-image": "^3.7.0",
     "react-toastify": "^8.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite --host",
+    "build": "vite build",
+    "serve": "vite preview"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "proxy": "http://localhost:3300"
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-tsconfig-paths": "^5.0.1"
+  }
 }
